@@ -5,3 +5,8 @@ p.venue {
   font-style: italic;
   margin-bottom: 1em;
 }
+
+.title.slide h2 {
+  font-size: 1.66em;
+  line-height: 1.2;
+}
