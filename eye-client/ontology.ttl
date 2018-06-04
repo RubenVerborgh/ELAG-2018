@@ -1,0 +1,11 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX schema: <http://schema.org/>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+foaf:knows a owl:SymmetricProperty.
+
+schema:name owl:equivalentProperty rdfs:label.
+schema:name owl:equivalentProperty dc:title.
+schema:name owl:equivalentProperty foaf:name.

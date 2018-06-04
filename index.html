@@ -739,10 +739,18 @@ SELECT ?friend ?like WHERE {
     </ol>
   </div>
 
-  <div class="slide" id="reasoning">
+  <div class="slide" id="ted-knows-tim-rule">
     <h2>
       Reasoning on the data and its ontologies<br>
       makes hidden semantics explicit.
+    </h2>
+    <iframe class="query-client" src="eye-client/#data=data.ttl&amp;data=ontology.ttl&amp;data=rules.n3&amp;query=query.n3"></iframe>
+  </div>
+
+  <div class="slide" id="reasoning">
+    <h2>
+      We use forward-chaining reasoning<br>
+      in a careful multi-step process.
     </h2>
     <ol>
       <li class="next"><strong>Skolemize</strong> ontologies to remove blank nodes.</li>

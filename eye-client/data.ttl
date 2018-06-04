@@ -1,0 +1,7 @@
+PREFIX rv: <https://ruben.verborgh.org/profile/#>
+PREFIX jdr: <https://josd.github.io/card.rdf#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+rv:me  foaf:knows jdr:me.
+rv:me  foaf:name "Ruben Verborgh"@en.
+jdr:me foaf:name "Jos De Roo"@en.
