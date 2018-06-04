@@ -198,6 +198,9 @@ Location: https://www.elag2018.org/inbox/3679efc35</code></pre>
       </li>
       <li class="next">
         I log in with <em>https://ruben.verborgh.org/profile/#me</em>
+        <ul>
+          <li>giving the app permission to access (parts of) my data</li>
+        </ul>
       </li>
       <li class="next">
         The app requests data on my behalf
@@ -252,7 +255,7 @@ Location: https://www.elag2018.org/inbox/3679efc35</code></pre>
     <pre><code>const me = 'https://ruben.verborgh.org/profile/#me';
 const profile = await fetch(me);
 const triples = parseTurtle(await profile.text());
-const friends = triples.findObjects(me, foaf:knows);
+const friends = triples.findObjects(me, 'foaf:knows');
 
 friends.forEach(friend =&gt; {
   const profile = await fetch(friend);
