@@ -30,6 +30,10 @@ p.venue {
   height: 400px;
 }
 
+.slide pre code {
+  letter-spacing: -.75px;
+}
+
 .slide table th, .slide table td {
   text-align: right;
   padding-right: 45px;

@@ -244,6 +244,23 @@ Location: https://www.elag2018.org/inbox/3679efc35</code></pre>
     </figure>
   </div>
 
+  <div class="slide" id="requests-example">
+    <h2>
+      We have to manually contact sources<br>
+      and hope that contracts don’t change.
+    </h2>
+    <pre><code>const me = 'https://ruben.verborgh.org/profile/#me';
+const profile = await fetch(me);
+const triples = parseTurtle(await profile.text());
+const friends = triples.findObjects(me, foaf:knows);
+
+friends.forEach(friend =&gt; {
+  const profile = await fetch(friend);
+  const triples = parseTurtle(await profile.text());
+  // now find likes
+});</code></pre>
+  </div>
+
   <div class="slide" id="queries">
     <h2>
       Query-based contracts can make<br>
@@ -252,6 +269,22 @@ Location: https://www.elag2018.org/inbox/3679efc35</code></pre>
     <figure class="cover width margin">
       <img src="images/query-based-interaction.svg" alt="">
     </figure>
+  </div>
+
+  <div class="slide" id="queries-example">
+    <h2>
+      This query captures the same intent<br>
+      independently of sources and interfaces.
+    </h2>
+    <pre><code>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX as: &lt;http://www.w3.org/ns/activitystreams#&gt;
+
+SELECT ?friend ?like WHERE {
+  &lt;https://ruben.verborgh.org/profile/#me&gt; foaf:knows ?friend.
+  &#95;:like a as:Like;
+    as:actor ?friend;
+    as:object ?like.
+}</code></pre>
   </div>
 
   <div class="toc slide" id="toc-publication-metadata">
