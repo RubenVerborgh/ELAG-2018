@@ -776,10 +776,50 @@ SELECT ?friend ?like WHERE {
       <li class="next">
         TPF interfaces are cheap.
         <ul>
-          <li>My server costs less than $5/month.</li>
+          <li>My server costs less than €5/month.</li>
         </ul>
       </li>
     </ul>
+  </div>
+
+  <div class="slide" id="my-tpf">
+    <h2>
+      This is my personal data<br>
+      in a Triple Pattern Fragments interface.
+    </h2>
+    <iframe src="https://data.verborgh.org/ruben"></iframe>
+  </div>
+
+  <div class="slide" id="query-schema">
+    <h2>
+      What scholarly articles did I write<br>
+      about Linked Data Fragments?
+    </h2>
+    <iframe class="query-client" src="query-client/#datasources=https%3A%2F%2Fdata.verborgh.org%2Fruben&query=SELECT%20%3Ftitle%20%3Farticle%20WHERE%20%7B%0A%20%20%3Farticle%20a%20schema%3AScholarlyArticle%3B%0A%20%20%20%20schema%3Aauthor%20%5B%20schema%3Aname%20%22Ruben%20Verborgh%22%40en%20%5D%3B%0A%20%20%20%20schema%3Aname%20%3Ftitle%3B%0A%20%20%20%20schema%3Aabout%20%5B%20schema%3Aname%20%22Linked%20Data%20Fragments%22%40en%20%5D.%0A%7D"></iframe>
+  </div>
+
+  <div class="slide" id="query-foaf">
+    <h2>
+      What scholarly articles did I write<br>
+      about Linked Data Fragments?
+    </h2>
+    <iframe class="query-client" src="query-client/#datasources=https%3A%2F%2Fdata.verborgh.org%2Fruben&query=SELECT%20%3Ftitle%20%3Farticle%20WHERE%20%7B%0A%20%20%3Farticle%20a%20foaf%3ADocument%3B%0A%20%20%20%20foaf%3Amaker%20%5B%20foaf%3Aname%20%22Ruben%20Verborgh%22%40en%20%5D%3B%0A%20%20%20%20foaf%3Aname%20%3Ftitle%3B%0A%20%20%20%20foaf%3Atopic%20%5B%20foaf%3Aname%20%22Linked%20Data%20Fragments%22%40en%20%5D.%0A%7D"></iframe>
+  </div>
+
+  <div class="slide" id="query-dc">
+    <h2>
+      What scholarly articles did I write<br>
+      about Linked Data Fragments?
+    </h2>
+    <iframe class="query-client" src="query-client/#datasources=https%3A%2F%2Fdata.verborgh.org%2Fruben&query=SELECT%20%3Ftitle%20%3Farticle%20WHERE%20%7B%0A%20%20%3Farticle%0A%20%20%20%20dc%3Acreator%20%5B%20dc%3Atitle%20%22Ruben%20Verborgh%22%40en%20%5D%3B%0A%20%20%20%20dc%3Atitle%20%3Ftitle%3B%0A%20%20%20%20dc%3Asubject%20%5B%20dc%3Atitle%20%22Linked%20Data%20Fragments%22%40en%20%5D.%0A%7D"></iframe>
+  </div>
+
+  <div class="slide" id="query-mixed">
+    <h2>
+      What scholarly articles did I write<br>
+      about Linked Data Fragments?
+    </h2>
+    <iframe class="query-client" src="query-client/#datasources=https%3A%2F%2Fdata.verborgh.org%2Fruben&query=SELECT%20%3Farticle%20%3Ftitle%20WHERE%20%7B%0A%20%20%3Farticle%20a%20schema%3AScholarlyArticle%3B%0A%20%20%20%20%20dc%3Acreator%20%5B%20rdfs%3Alabel%20%22Ruben%20Verborgh%22%40en%20%5D%3B%0A%20%20%20%20%20rdfs%3Alabel%20%3Ftitle%3B%0A%20%20%20%20%20foaf%3Atopic%20%5B%20rdfs%3Alabel%20%22Linked%20Data%20Fragments%22%40en%20%5D.%0A%7D"></iframe>
   </div>
 
   <div class="slide" id="query-results">
