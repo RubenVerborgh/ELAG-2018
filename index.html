@@ -631,7 +631,7 @@ SELECT ?friend ?like WHERE {
         </ul>
       </li>
       <li class="next">
-        The semantic constructs in the query<br>
+        The vocabulary constructs in the query<br>
         are seldom identical to those of the data.
         <ul>
           <li class="next">
@@ -646,6 +646,59 @@ SELECT ?friend ?like WHERE {
             <code>foaf:name</code>,
             or
             <code>schema:name</code>?
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide" id="questions-ontologies">
+    <h2>
+      Open questions about<br>
+      modeling Linked Data:
+    </h2>
+    <ul>
+      <li class="next">
+        What <em>ontologies</em> should we use?
+        <ul>
+          <li>…on webpages?</li>
+          <li>…in a FOAF profile?</li>
+        </ul>
+      </li>
+      <li class="next">
+        Should we describe the same concepts<br>
+        using <em>multiple</em> ontologies?
+      </li>
+      <li class="next">
+        Should we use <em>generic</em> properties and classes<br>
+        or <em>specific</em> subproperties and subclasses?
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide" id="postel">
+    <h2>
+      <q>Be conservative in what you send,<br>
+         but literal in what you accept.</q>
+    </h2>
+    <ul>
+      <li class="next">
+        Interestingly, with Linked Data,
+        being <strong>conservative</strong><br>
+        does <em>not</em> mean limiting our vocabularies.
+        <ul>
+          <li class="next">
+            The lower the number of vocabularies you use,<br>
+            the lower the chance the client knows any of them.
+          </li>
+        </ul>
+      </li>
+      <li class="next">
+        Represent the same data in <em>multiple</em> ontologies<br>
+        to maximize client compatibility.
+        <ul>
+          <li class="next">
+            There will at least be <em>one</em> ontology it understands.
           </li>
         </ul>
       </li>
@@ -847,30 +900,6 @@ SELECT ?friend ?like WHERE {
                                         <td>  0</td><td>  4</td><td> 4.0</td><td>0.4</td></tr>
     </tbody>
     </table>
-  </div>
-
-  <div class="slide" id="questions-ontologies">
-    <h2>
-      Open questions about<br>
-      <em>modeling</em> Linked Data:
-    </h2>
-    <ul>
-      <li class="next">
-        What <em>ontologies</em> should we use?
-        <ul>
-          <li>…on webpages?</li>
-          <li>…in a FOAF profile?</li>
-        </ul>
-      </li>
-      <li class="next">
-        Should we describe the same concepts<br>
-        using <em>multiple</em> ontologies?
-      </li>
-      <li class="next">
-        Should we use <em>generic</em> properties and classes<br>
-        or <em>specific</em> subproperties and subclasses?
-      </li>
-    </ul>
   </div>
 
   <div class="toc slide" id="toc-roles">
