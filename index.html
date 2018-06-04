@@ -84,6 +84,84 @@
     </figure>
   </div>
 
+  <div class="slide" id="solid">
+    <h2>
+      <em>Solid</em> is an application platform for<br>
+      decentralization through Linked Data.
+    </h2>
+    <iframe src="https://solid.mit.edu/"></iframe>
+  </div>
+
+  <div class="slide" id="like">
+    <h2>
+      The creator represents each data item<br>
+      as Linked Data.
+    </h2>
+    <pre><code>PREFIX as: &lt;https://www.w3.org/ns/activitystreams#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+
+&lt;#elag2018&gt; a as:Like;
+  as:actor  &lt;https://ruben.verborgh.org/profile/#me&gt;;
+  as:object &lt;https://www.elag2018.org/#conference&gt;;
+  as:published "2018-06-05T07:00:00Z"^^xsd:dateTime.</code></pre>
+  </div>
+
+  <div class="slide" id="announce">
+    <h2>
+      Others can learn about my data<br>
+      through Linked Data Notifications.
+    </h2>
+    <pre><code>PREFIX as: &lt;https://www.w3.org/ns/activitystreams#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+
+_:announce a as:Announce;
+  as:actor  &lt;https://ruben.verborgh.org/profile/#me&gt;;
+  as:object &lt;https://drive.verborgh.org/likes/#elag2018&gt;;
+  as:target &lt;https://www.elag2018.org/#conference&gt;;
+  as:updated "2018-06-05T07:00:00Z"^^xsd:dateTime.</code></pre>
+  </div>
+
+  <div class="slide" id="inbox">
+    <h2>
+      A Linked Data Notification is<br>
+      posted to your inbox.
+    </h2>
+    <pre><code>POST /inbox/ HTTP/1.1
+Host: www.elag2018.org
+Content-Type: text/turtle</code></pre>
+    <pre class="next"><code>HTTP/1.1 201 Created
+Location: https://www.elag2018.org/inbox/3679efc35</code></pre>
+  </div>
+
+  <div class="slide" id="linking-back">
+    <h2>
+      If I place a comment,<br>
+      you can choose to link back.
+    </h2>
+    <ul>
+      <li class="next">
+        you will know about my comment
+        <ul>
+          <li>if you advertise a notification inbox</li>
+          <li>if I choose to notify you</li>
+        </ul>
+      </li>
+      <li class="next">
+        you can see my comment
+        <ul>
+          <li>if I give you access permissions</li>
+        </ul>
+      </li>
+      <li class="next">
+        you can link back to my comment
+        <ul>
+          <li>if you want to</li>
+          <li>so others can discover it</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
   <div class="toc slide" id="toc-apps-views">
     <ul>
       <li class="current">
